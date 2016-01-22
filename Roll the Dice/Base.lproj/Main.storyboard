@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Roll_the_Dice" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uNs-mx-q9i">
+                                <rect key="frame" x="238" y="282" width="124" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Roll the Dice!!">
+                                    <color key="titleColor" red="0.14828735589981079" green="0.40586084127426147" blue="0.48691922426223755" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="RollDice:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mwH-Zk-QEf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.87839256437964142" green="1" blue="0.98145313405013956" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="uNs-mx-q9i" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="5wO-KS-hrx"/>
+                            <constraint firstItem="uNs-mx-q9i" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sup-et-Squ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="vpp-Ga-QxT" kind="presentation" identifier="RollDice" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="omv-ij-GD4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="682" y="123"/>
+        </scene>
+        <!--Dice View Controller-->
+        <scene sceneID="dtS-Md-qD8">
+            <objects>
+                <viewController id="vpp-Ga-QxT" customClass="DiceViewController" customModule="Roll_the_Dice" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eru-Ef-TAp"/>
+                        <viewControllerLayoutGuide type="bottom" id="1Bh-Jf-paz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aNr-5K-Xuq">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="d1" translatesAutoresizingMaskIntoConstraints="NO" id="EHf-rF-qeN">
+                                <rect key="frame" x="180" y="141" width="50" height="50"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BgC-GV-zei">
+                                <rect key="frame" x="285" y="437" width="30" height="38"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
+                                <size key="titleShadowOffset" width="2" height="0.0"/>
+                                <state key="normal" title="OK">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="dismiss:" destination="vpp-Ga-QxT" eventType="touchUpInside" id="MSS-jZ-0fP"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="d4" translatesAutoresizingMaskIntoConstraints="NO" id="6I8-VQ-QQj">
+                                <rect key="frame" x="275" y="228" width="50" height="50"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="EHf-rF-qeN" firstAttribute="top" secondItem="eru-Ef-TAp" secondAttribute="bottom" constant="121" id="49u-2n-voe"/>
+                            <constraint firstItem="6I8-VQ-QQj" firstAttribute="centerX" secondItem="BgC-GV-zei" secondAttribute="centerX" id="FcU-3S-QTH"/>
+                            <constraint firstItem="EHf-rF-qeN" firstAttribute="leading" secondItem="aNr-5K-Xuq" secondAttribute="leading" constant="180" id="Jtb-y7-Ss5"/>
+                            <constraint firstItem="6I8-VQ-QQj" firstAttribute="top" secondItem="eru-Ef-TAp" secondAttribute="bottom" constant="208" id="KBS-qN-iYw"/>
+                            <constraint firstItem="1Bh-Jf-paz" firstAttribute="top" secondItem="BgC-GV-zei" secondAttribute="bottom" constant="125" id="jdY-nm-vdX"/>
+                            <constraint firstItem="BgC-GV-zei" firstAttribute="centerX" secondItem="aNr-5K-Xuq" secondAttribute="centerX" id="vLw-PN-8PN"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="firstDie" destination="EHf-rF-qeN" id="uPc-Oa-7XD"/>
+                        <outlet property="secondDie" destination="6I8-VQ-QQj" id="fm8-9a-Rdp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KPx-3Z-N30" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1420" y="128"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="d1" width="50" height="50"/>
+        <image name="d4" width="50" height="50"/>
+    </resources>
+</document>
